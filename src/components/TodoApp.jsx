@@ -20,8 +20,12 @@ export function TodoApp() {
       name: title,
       completed: false
     };
+
+    if (newTodo.length === 0) {
+      console.log('ist leer')
+    } else  
     setTodos([...todos, newTodo]);
-    setTitle('')
+    setTitle('') 
   };
 
   function handleClickUpdateTodo(id, value){
@@ -52,40 +56,44 @@ export function TodoApp() {
   }
 
   return (
+    <div className='flex flex-col'>
     <div
       className='
         w-auto h-[900px]
-        my-[80px]
+        mt-[40px]
         p-10
         bg-white border-radius rounded-[30px]
-        flex flex-col justify-around items-center gap-10
+        flex flex-col justify-start items-center gap-10
         '>
       
-      <div className='text-4xl'>
-        <h1 className='font-bold text-darkRosa'>Hi, You!</h1>
-        <h3 className='font-light opacity-50'>you have something...</h3>
-      </div>
-
-      <div
-        aria-label='logoAndDate'
-        className="
-          flex flex-row items-center
-          gap-[80px]
-          bg-lightRosa p-4 rounded-3xl
-          ">
-        <h2
-          aria-label='logo'
-          className='
+      {/* SATZ */}
+      <div className=' flex flex-col gap-5'>
+        <div className='flex flex-col justify-start'>
+        <h1 className='text-4xl font-bold text-darkRosa'>Hi, You!</h1>
+        <h3 className='text-4xl font-light opacity-50'>you have something...</h3>
+        </div>
+      
+      {/* LOGO - DATUM */}
+        <div
+          aria-label='logoAndDate'
+          className="
+            flex flex-row items-center
+            gap-[80px]
+            bg-lightRosa p-4 rounded-3xl
+            ">
+          <h2
+            aria-label='logo'
+            className='
             p-5 rounded-full
             font-bold text-background text-xl
             bg-white'
-          >To do<br></br>today!</h2>
-        <h2
-          aria-label='date'
-          className='text-white
+            >To do<br></br>today!</h2>
+          <h2
+            aria-label='date'
+            className='text-white
             font-bold text-7xl'
-          >{date}</h2>
-
+            >{date}</h2>
+        </div>
       </div>
 
       <div
@@ -129,17 +137,18 @@ export function TodoApp() {
 
         </div>
       </div>
+    </div>
 
       {/* DELETE BUTTON AND TIME */}
     <div
       aria-label='deleteButtonAndTime'
       className='flex flex-col
-        justify-center items-center'>
+        justify-center items-center mt-[-120px]'>
       {/* DELETE BUTTON */}
         <div
           aria-label='buttonDeleteAll'
-          className='w-[10em] p-3 rounded-full
-            flex justify-center
+          className='w-[10em] p-2 rounded-full
+            flex justify-center items-end font-bold text-xl
             bg-darkRosa text-white
           '>
           <button className="btn btn-secondary" onClick={deleteAll}>Delete all</button>
