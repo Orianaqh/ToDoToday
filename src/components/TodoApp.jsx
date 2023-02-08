@@ -21,11 +21,11 @@ export function TodoApp() {
       completed: false
     };
 
-    if (newTodo.length === 0) {
-      console.log('ist leer')
-    } else  
-    setTodos([...todos, newTodo]);
-    setTitle('') 
+    if (newTodo.length === '') {
+      alert("ingresa algo")
+    } else {
+      setTodos([...todos, newTodo]);
+    } 
   };
 
   function handleClickUpdateTodo(id, value){
