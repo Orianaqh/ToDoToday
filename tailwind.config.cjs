@@ -11,7 +11,7 @@ module.exports = {
         light: "#4C53A8", // footer
         gray: "#1C1D3C", // text
         white: '#ebede6',
-        blackLight: '#39333f',
+        blackLight: '#29292b',
         // lightGray: "#BDBDBD", // form elemente
       },
       fontFamily: {
