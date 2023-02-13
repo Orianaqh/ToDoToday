@@ -1,13 +1,18 @@
 import React from 'react'
+import { useState } from 'react'
 
 function Calculator() {
+  const [number, setNumber] =useState(0)
   return (
-    <div className='mt-[30px] shadow-inner'>
+    <div className='mt-[20px] md:mt-[100px] shadow-inner'>
 
-      <div className='w-[500px] bg-dark h-[110px] justify-center flex items-center'>
-        <div className='w-[450px] bg-dark2 h-[70px] rounded-xl'></div>
+      <div className='hidden w-[500px] bg-dark h-[160px] rounded-t-2xl justify-center md:flex items-center'>
+        <input 
+          placeholder='000'
+          className='w-[450px] bg-dark2 h-[100px] rounded-xl p-5 placeholder:text-[60px] placeholder:text-right'>
+          </input>
       </div>
-      <p className='w-[500px] bg-light h-[350px] rounded-b-2xl relative -top-1'></p>
+      <p className='hidden w-[500px] bg-light h-[450px] rounded-b-2xl md:relative -top-1'></p>
     </div>
   )
 }

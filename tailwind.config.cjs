@@ -9,6 +9,7 @@ module.exports = {
         dark2: "#1C1D3C",
         light: "#4C53A8", // footer
         gray: "#1C1D3C", // text
+        white: '#ebede6',
         // lightGray: "#BDBDBD", // form elemente
       },
       fontFamily: {
