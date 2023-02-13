@@ -5,11 +5,13 @@ module.exports = {
     extend: {
       colors: {
         background: "#BCD9A0",
+        backgroundDark: "#94be83",
         dark: "#2F3160", // Text
         dark2: "#1C1D3C",
         light: "#4C53A8", // footer
         gray: "#1C1D3C", // text
         white: '#ebede6',
+        blackLight: '#39333f',
         // lightGray: "#BDBDBD", // form elemente
       },
       fontFamily: {
