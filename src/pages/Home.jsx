@@ -28,7 +28,7 @@ function Home() {
 
     {/* LEFT FLEX */}
       <div
-        className='flex flex-col justify-between items-center
+        className='flex flex-col justify-between xl:items-start items-center
         gap-[60px] lg:gap-[30px]'>
         {/* IMAGE */}
         <img src={ImageMann} className='w-full md:w-[400px] lg:w-[500px]'/>
@@ -38,7 +38,7 @@ function Home() {
             text-blackLight bg-backgroundDark bg-opacity-30
             shadow-inner rounded-full w-[300px] h-[120px] md:mt-[40px] flex justify-center items-center'>ToDo <br></br> TODAY</h1>
         {/* BUTTONS  */}
-        <div className='flex flex-row w-full justify-around items-center'>
+        <div className='flex flex-row w-full justify-center xl:justify-start items-center xl:ml-5'>
             {/* GITHUB and ME BUTTONS */}
             <div className='flex flex-row justify-center gap-2 mr-[50px] md:mr-0'>
               <p
