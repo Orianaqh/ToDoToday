@@ -5,7 +5,7 @@ function Screen({value}) {
   return (
     <Textfit
       aria-label='screen'
-      className='flex items-center justify-end bg-light text-white font-bold rounded-xl w-full h-[50px] mb-2 mt-5'
+      className='flex items-center justify-end bg-white text-gray text-opacity-30 font-thin rounded-xl w-full h-[50px] mb-2 mt-5'
       mode='single'
       max={70}>
       {value}

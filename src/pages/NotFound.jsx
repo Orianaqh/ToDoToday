@@ -1,8 +1,11 @@
 import React from 'react'
+import { MdSmsFailed } from 'react-icons/md';
 
 function NotFound() {
   return (
-    <div>NotFound</div>
+    <div>
+      <MdSmsFailed/>
+    </div>
   )
 }
 

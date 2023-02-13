@@ -16,15 +16,20 @@ function Home() {
 
   const toMe = () => {
     window.open('https://mypage-react-vite.vercel.app/', "_blank")
-  }
+  };
+
+  const toGithub = () => {
+    window.open('https://github.com/Orianaqh', "_blank")
+  };
+
   return (
-    <div className='flex flex-col md:flex-row mx-[20px]
-    md:mx-[60px]'>
+    <div className='flex flex-col justify-center md:flex-row mx-[20px]
+    md:mx-[60px] xl:mx-0'>
 
     {/* LEFT FLEX */}
       <div
         className='flex flex-col justify-between items-center
-        gap-[60px] lg:w-[70%]'>
+        gap-[60px] lg:gap-[30px]'>
         {/* IMAGE */}
         <img src={ImageMann} className='w-full md:w-[400px] lg:w-[500px]'/>
         {/* LOGO */}
@@ -38,12 +43,13 @@ function Home() {
             <div className='flex flex-row justify-center gap-2 mr-[50px] md:mr-0'>
               <p
                 className='hidden text-gray text-opacity-30 md:flex justify-center leading-[15px]
-                items-center text-center'>Hey! visit my Github <br></br>and/our my Page</p>
-              <button className='w-[45px] h-[45px] bg-backgroundDark bg-opacity-30 shadow-inner
+                items-center text-center'>Hey! visit my Github <br></br>and/or my Page</p>
+              <button
+                onClick={toGithub}
+                className='w-[45px] h-[45px] bg-backgroundDark bg-opacity-30 shadow-inner
                 rounded-full text-gray text-opacity-20 font-black
                 flex justify-center items-center'>
-                <GoLogoGithub className='text-5xl hidden lg:flex'/>
-                <GoMarkGithub className='text-3xl lg:hidden'/>
+                <GoMarkGithub className='text-3xl'/>
               </button>
               <button
                 onClick={toMe}
@@ -63,7 +69,7 @@ function Home() {
               className='md:hidden relative w-[45px] h-[45px] bg-light rounded-xl text-dark2 text-opacity-80 font-black
               flex justify-center items-center'><CgNotes className='text-xl'/></button>
             <button
-            onClick={() => navigate('/notes')}
+            onClick={() => navigate('/calculate')}
               className='md:hidden relative w-[45px] h-[45px] bg-light rounded-xl text-backgroundDark text-opacity-80 font-black
               flex justify-center items-center'><CiCalculator2 className='text-2xl'/></button>
           </div>
@@ -71,28 +77,34 @@ function Home() {
       </div>
 
     {/* RIGHT FLEX */}
-      <div className='flex flex-col md:w-[40%] lg:w-[50%] items-center md:items-end justify-center md:justify-start'>
+      <div className='flex flex-col md:w-[40%] lg:w-[50%] xl:w-[20%] items-center md:items-end justify-center md:justify-start'>
       {/* CALCULATOR */}
         <Calculator />
       {/* CHECKLIST */}
         <div className='shadow-inner'>
           <Link to={'/checklist'}>
-            <h2 className='hidden w-[100px] md:w-[200px] lg:w-[250px] bg-light h-[60px]
+            <h2 className='hidden w-[100px] md:w-[200px] lg:w-[300px] bg-light h-[60px]
             rounded-2xl md:rounded-none md:rounded-t-2xl md:flex
-            justify-end items-center text-white font-black'>Checklist<IoIosArrowForward className='text-[40px] mr-3'/>
+            justify-end items-center text-white font-black gap-3'>
+              <BsUiChecks className='text-xl'/>
+              Checklist
+              <IoIosArrowForward className='text-[40px] mr-3'/>
             </h2>
           </Link>
-          <p className='hidden md:flex w-[200px] lg:w-[250px] bg-dark h-[80px] rounded-b-2xl relative -top-1'></p>
+          <p className='hidden md:flex w-[200px] lg:w-[300px] bg-dark h-[80px] rounded-b-2xl relative -top-1'></p>
         </div>
       {/* NOTES */}
         <div className='mt-[10px]'>
           <Link to={'/notes'}>
-          <h2 className='hidden w-[100px] md:w-[200px] lg:w-[250px] bg-light h-[60px]
+          <h2 className='hidden w-[100px] md:w-[200px] lg:w-[300px] bg-light h-[60px]
             rounded-2xl md:rounded-none md:rounded-t-2xl md:flex
-            justify-end items-center text-white font-black'>You Notes<IoIosArrowForward className='text-[40px] mr-3'/>
+            justify-end items-center text-white font-black gap-3'>
+              <CgNotes className='text-xl'/>
+              You Notes
+              <IoIosArrowForward className='text-[40px] mr-3'/>
             </h2>
           </Link>
-          <p className='hidden md:flex w-[200px] lg:w-[250px] bg-dark h-[80px] rounded-b-2xl relative -top-1'></p>
+          <p className='hidden md:flex w-[200px] lg:w-[300px] bg-dark h-[80px] rounded-b-2xl relative -top-1'></p>
         </div>
       </div>
 
