@@ -23,13 +23,13 @@ function Home() {
   };
 
   return (
-    <div className='flex flex-col justify-center md:flex-row mx-[20px]
+    <div className='flex flex-col justify-center md:flex-row
     md:mx-[60px] xl:mx-0'>
 
     {/* LEFT FLEX */}
       <div
         className='flex flex-col justify-between xl:items-start items-center
-        gap-[60px] lg:gap-[30px]'>
+        gap-[40px] lg:gap-[30px]'>
         {/* IMAGE */}
         <img src={ImageMann} className='w-full md:w-[400px] lg:w-[500px]'/>
         {/* LOGO */}

@@ -43,7 +43,7 @@ function Todo({item, onUpdate, onDelete, changeStatus}) {
     return (
       <ul
         aria-label="todo"
-        className="shadow-inner bg-background mb-1 rounded-lg">
+        className="shadow-inner bg-light mb-1 rounded-lg">
           <div className={item.completed ? "true" : "false"}>
             <li
               className="p-1 flex items-center justify-between"
