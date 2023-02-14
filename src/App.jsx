@@ -16,7 +16,10 @@ function App() {
         <Route path='/notes' element={<Notes/>}/>
         <Route path='*' element={<NotFound/>}/>
       </Routes>
-      <Footer />
+      <div className="flex flex-row md:w-[520px] lg:w-[590px]
+      justify-center items-center w-full">
+        <Footer />
+      </div>
     </div>
   )
 }
