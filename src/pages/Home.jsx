@@ -35,15 +35,15 @@ function Home() {
         {/* LOGO */}
           <h1
             className='font-black font-body text-center text-[60px] leading-[50px]
-            text-blackLight bg-backgroundDark bg-opacity-30
+            text-white text-opacity-70 bg-backgroundDark bg-opacity-30
             shadow-inner rounded-full w-[200px] h-[150px] md:w-[300px] md:h-[120px] md:mt-[40px] flex justify-center items-center'>ToDo <br></br> TODAY</h1>
         {/* BUTTONS  */}
         <div className='flex flex-col justify-center items-center gap-3'>
             {/* GITHUB and ME BUTTONS */}
             <div className='flex flex-row justify-center gap-2'>
               <p
-                className='hidden text-gray text-opacity-30 md:flex justify-center leading-[15px]
-                items-center text-center'>Hey! visit my Github <br></br>and/or my Page</p>
+                className='hidden text-gray text-opacity-20 md:flex justify-center leading-[12px]
+                items-center text-xs text-center'>Hey! visit <br></br>  my Github <br></br>and Page</p>
               <button
                 onClick={toGithub}
                 className='w-[45px] h-[45px] bg-backgroundDark bg-opacity-30 shadow-inner

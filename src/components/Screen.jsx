@@ -7,7 +7,7 @@ function Screen({value}) {
       aria-label='screen'
       className='flex items-center justify-end 
       bg-white text-light text-2xl font-regular
-      rounded-xl w-full h-[50px] my-4 p-2'
+      rounded-xl w-full h-[50px] my-4 p-2 pr-3'
       mode='single'
       max={70}>
       {value}
