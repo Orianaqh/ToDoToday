@@ -2,6 +2,8 @@ import React from 'react'
 import ImageMann from '../assets/images/vmann.png'
 import Calculator from '../components/Calculator'
 import { Link, useNavigate } from 'react-router-dom'
+import Footer from "../components/Footer"
+
 //ICONS
 import { IoIosArrowForward } from 'react-icons/io';
 import { GoLogoGithub, GoMarkGithub } from 'react-icons/go';
@@ -23,6 +25,7 @@ function Home() {
   };
 
   return (
+    <>
     <div className='flex flex-col justify-center md:flex-row
     md:mx-[60px] xl:mx-0'>
 
@@ -40,7 +43,7 @@ function Home() {
         {/* BUTTONS  */}
         <div className='flex flex-col justify-center items-center gap-3'>
             {/* GITHUB and ME BUTTONS */}
-            <div className='flex flex-row justify-center 2xl:justify-end gap-2'>
+            <div className='flex flex-row justify-center relative lg:left-10 gap-2'>
               <p
                 className='hidden text-gray text-opacity-20 md:flex justify-center leading-[12px]
                 items-center text-xs text-center'>Hey! visit <br></br>  my Github <br></br>and Page</p>
@@ -107,8 +110,12 @@ function Home() {
           <p className='hidden md:flex w-[200px] lg:w-[300px] bg-dark h-[80px] rounded-b-2xl relative -top-1'></p>
         </div>
       </div>
-
     </div>
+      <div className="flex flex-row md:w-[520px] lg:w-[590px]
+      justify-center items-center w-full">
+        <Footer />
+      </div>
+    </>
   )
 }
 

@@ -80,19 +80,14 @@ function Checklist() {
         </h2>
       </Link>
 
-      {/* TODO */}
-      <div
-        className='bg-dark min-h-[380px] max-h-[380px] overflow-y-auto'
-        aria-label='inputAndToDos'>
-        <form
-          className='flex flex-row items-center justify-center gap-3 mx-[30px]'>
+        <form>
         {/* INPUT TODO */}
-        <div className='flex flex-row justify-center items-center mt-5 gap-2'>
+        <div className='flex flex-row justify-center items-center gap-2 bg-dark py-2'>
           <input 
           aria-label='todoInput'
-          className=' w-full p-1 px-3 text-gray text-opacity-80 font-thin
-            rounded-[1rem] focus:outline-light
-            border border-light'
+          className='w-[190px] md:w-[340px] xl:w-[560px] p-1 px-3 text-gray text-opacity-80 font-thin
+          rounded-[1rem] focus:outline-light
+          border border-light'
           type='text' 
           value={title}
           onChange={(e) => setTitle(e.target.value)}/>
@@ -105,9 +100,13 @@ function Checklist() {
         </div>
         </form>
 
+      {/* TODO */}
+      <div
+        className='bg-dark mt-[-1px] w-[250px] h-[280px] md:w-[450px] md:h-[350px] xl:w-[650px] lg:min-h-[380px] lg:max-h-[380px] overflow-y-auto'
+        aria-label='inputAndToDos'>
         <div
           aria-label='todos'
-          className='flex flex-col justify-center mx-[30px] mt-5'>
+          className='flex flex-col justify-center mx-[20px] mt-3'>
           {todos.map(item => {
             return(
               <Todo
@@ -127,7 +126,7 @@ function Checklist() {
       {/* DELETE BUTTON AND TIME */}
     <div
       aria-label='deleteButtonAndTime'
-      className='flex flex-row-reverse justify-center items-center gap-8 pb-5 pt-5
+      className='flex flex-row-reverse justify-center md:justify-between md:px-5 items-center gap-8 pb-5 pt-5 mt-[-2px]
       w-[250px] md:w-[450px] xl:w-[650px] bg-dark h-[60px] rounded-b-2xl'>
       {/* DELETE BUTTON */}
         <div

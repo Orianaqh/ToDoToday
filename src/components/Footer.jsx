@@ -14,13 +14,13 @@ function Footer() {
     xl:right-[-300px] xl:top-[31%]
     transition duration-700 ease-in-out
     hover:translate-x-[-250px] flex justify-center items-center'>
-      <h2 className='hidden w-[70px] text-white font-body font-black text-4xl mx-8
-      rotate-[90deg] xl:flex xl:flex-col justify-center items-center relative'>more?</h2>
+      <h2 className='hidden w-[70px] text-white font-body font-black text-4xl mr-8 ml-[-60px]
+      rotate-[90deg] xl:flex xl:flex-col justify-start items-center relative'>more?</h2>
       {/* RIGHTS */}
       <div className='flex flex-col md:flex-row lg:flex-col justify-center items-center'>
         <p className='
           md:text-[15px] text-xs xl:text-xl text-center text-white text-opacity-50 font-regular'>
-          {' '}  <p> &copy; 2023 All rights reserved{' '}</p> 
+          {' '}  <p className='xl:text-[15px]'> &copy; 2023 All rights reserved{' '}</p> 
         </p>
         <div className="inline">
           <span className='font-regular text-[15px] xl:text-l text-center text-dark2'>Image credits to</span>
