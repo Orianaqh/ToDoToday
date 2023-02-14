@@ -10,7 +10,7 @@ const toLocaleString = (num) =>
 
 const removeSpaces = (num) => num.toString().replace(/\s/g, "");
 
-function calulator() {
+function calculator() {
   let [cal, setCal] = useState({
     sign: '',
     num: 0,
@@ -117,7 +117,7 @@ function calulator() {
 
   return (
     <Wrapper>
-      <Screen className='text-xs' value={cal.num ? cal.num : cal.res} />
+      <Screen value={cal.num ? cal.num : cal.res} />
       <ButtonBox>
         {
           btnValues.flat().map((btn, i) =>{
@@ -148,4 +148,4 @@ function calulator() {
   )
 }
 
-export default calulator
+export default calculator

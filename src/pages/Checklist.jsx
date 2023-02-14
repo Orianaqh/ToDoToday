@@ -149,9 +149,6 @@ function Checklist() {
 
     {/* GITHUB and ME BUTTONS */}
     <div className='flex flex-row justify-center gap-10 md:mr-0'>
-      <p
-        className='text-gray text-opacity-30 md:flex justify-center leading-[15px]
-        items-center text-center'>Hey! visit my Github <br></br>and/or my Page</p>
         <div className='flex flex-row justify-center items-center gap-3'>
           <button
             onClick={toGithub}

@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div className='w-full bg-blackLight h-[50px] absolute bottom-0'>
+    <div className='w-[70%] bg-rot h-[40px] absolute bottom-0 flex justify-center items-center'>
         <p className='
           text-l text-center text-white text-opacity-30 font-thin mt-3'>
           {' '}

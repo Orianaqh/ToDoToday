@@ -3,13 +3,15 @@ import React from 'react'
 
 function Screen({value}) {
   return (
-    <Textfit
+    <div 
       aria-label='screen'
-      className='flex items-center justify-end bg-white text-gray text-opacity-30 font-thin rounded-xl w-full h-[50px] mb-2 mt-5'
+      className='flex items-center justify-end 
+      bg-white text-light text-2xl font-regular
+      rounded-xl w-full h-[50px] my-4 p-2'
       mode='single'
       max={70}>
       {value}
-    </Textfit>
+    </div>
   )
 }
 

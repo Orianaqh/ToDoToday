@@ -28,19 +28,19 @@ function Home() {
 
     {/* LEFT FLEX */}
       <div
-        className='flex flex-col justify-between xl:items-start items-center
-        gap-[40px] lg:gap-[30px]'>
+        className='flex flex-col justify-between xl:items-center items-center
+        gap-[20px] lg:gap-[30px]'>
         {/* IMAGE */}
-        <img src={ImageMann} className='w-full md:w-[400px] lg:w-[500px]'/>
+        <img src={ImageMann} className='w-full md:w-[400px] lg:w-[500px] xl:w-[500px]'/>
         {/* LOGO */}
           <h1
             className='font-black font-body text-center text-[60px] leading-[50px]
             text-blackLight bg-backgroundDark bg-opacity-30
-            shadow-inner rounded-full w-[300px] h-[120px] md:mt-[40px] flex justify-center items-center'>ToDo <br></br> TODAY</h1>
+            shadow-inner rounded-full w-[200px] h-[150px] md:w-[300px] md:h-[120px] md:mt-[40px] flex justify-center items-center'>ToDo <br></br> TODAY</h1>
         {/* BUTTONS  */}
-        <div className='flex flex-row w-full justify-center xl:justify-start items-center xl:ml-5'>
+        <div className='flex flex-col justify-center items-center gap-3'>
             {/* GITHUB and ME BUTTONS */}
-            <div className='flex flex-row justify-center gap-2 mr-[50px] md:mr-0'>
+            <div className='flex flex-row justify-center gap-2'>
               <p
                 className='hidden text-gray text-opacity-30 md:flex justify-center leading-[15px]
                 items-center text-center'>Hey! visit my Github <br></br>and/or my Page</p>
@@ -77,7 +77,7 @@ function Home() {
       </div>
 
     {/* RIGHT FLEX */}
-      <div className='flex flex-col md:w-[40%] lg:w-[50%] xl:w-[20%] items-center md:items-end justify-center md:justify-start'>
+      <div className='hidden md:flex flex-col md:w-[40%] lg:w-[50%] xl:w-[400px] items-center md:items-end justify-center md:justify-start'>
       {/* CALCULATOR */}
         <Calculator />
       {/* CHECKLIST */}
