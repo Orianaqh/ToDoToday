@@ -72,7 +72,7 @@ function Home() {
               className='md:hidden relative w-[45px] h-[45px] bg-light rounded-xl text-dark2 text-opacity-80 font-black
               flex justify-center items-center'><CgNotes className='text-xl'/></button>
             <button
-            onClick={() => navigate('/calculate')}
+            onClick={() => navigate('/calculator')}
               className='md:hidden relative w-[45px] h-[45px] bg-light rounded-xl text-backgroundDark text-opacity-80 font-black
               flex justify-center items-center'><CiCalculator2 className='text-2xl'/></button>
           </div>

@@ -2,6 +2,7 @@ import Home from "./pages/Home"
 import Checklist from "./pages/Checklist"
 import Notes from "./pages/Notes"
 import NotFound from "./pages/NotFound"
+import CalculatorPage from "./pages/CalculatorPage"
 import { Routes, Route } from "react-router-dom"
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/checklist' element={<Checklist/>}/>
         <Route path='/notes' element={<Notes/>}/>
+        <Route path='/calculator' element={<CalculatorPage/>}/>
         <Route path='*' element={<NotFound/>}/>
       </Routes>
     </div>
