@@ -4,7 +4,7 @@ import Todo from '../components/Todo';
 import moment from 'moment';
 //ICONS
 import { IoIosArrowBack } from 'react-icons/io';
-import { GoLogoGithub, GoMarkGithub } from 'react-icons/go';
+import { GoMarkGithub } from 'react-icons/go';
 import { AiFillSmile } from 'react-icons/ai';
 import { BsPlusCircleFill, BsFillClockFill } from 'react-icons/bs'
 
@@ -13,7 +13,9 @@ const time = moment().format('LT');
 
 function Checklist() {
   const [title, setTitle] = useState('');
-  const [todos, setTodos] = useState([{id: crypto.randomUUID(), name: 'Be happy!', completed: false},{id: crypto.randomUUID(), name: 'Dont cry', completed: true}]);
+  const [todos, setTodos] = useState(
+    [{id: crypto.randomUUID(), name: 'Be happy!', completed: false},
+    {id: crypto.randomUUID(), name: 'Dont cry', completed: true}]);
   const navigate = useNavigate()
 
   function addTodo(e){
@@ -50,13 +52,11 @@ function Checklist() {
   };
 
   function handleStatus(id){
-    const change = todos.map((todo) => {
-      if(todo === id){
-        todo.completed = !todo.completed
+    todos.forEach(((item) => {
+      if (item.id === id) {
+        item.completed = !item.completed;
       }
-      return todo
-    })
-    setTodos(change)
+    }))
   }
 
   const toMe = () => {
@@ -93,7 +93,9 @@ function Checklist() {
           onChange={(e) => setTitle(e.target.value)}/>
           {/* AdButton TODO */}
           <button
-            className=''
+            type='button'
+            aria-label='adButton'
+            disabled= {title ? '' : 'disabled'}
             onClick={addTodo}
             ><BsPlusCircleFill className='w-[30px] h-[30px] text-light'/>
           </button>
@@ -102,7 +104,8 @@ function Checklist() {
 
       {/* TODO */}
       <div
-        className='bg-dark mt-[-1px] w-[250px] h-[280px] md:w-[450px] md:h-[350px] xl:w-[650px] lg:min-h-[380px] lg:max-h-[380px] overflow-y-auto'
+        className='bg-dark mt-[-1px] w-[250px] h-[280px] md:w-[450px]
+        md:h-[350px] xl:w-[650px] lg:min-h-[380px] lg:max-h-[380px] overflow-y-auto'
         aria-label='inputAndToDos'>
         <div
           aria-label='todos'
@@ -126,20 +129,25 @@ function Checklist() {
       {/* DELETE BUTTON AND TIME */}
     <div
       aria-label='deleteButtonAndTime'
-      className='flex flex-row-reverse justify-center md:justify-between md:px-5 items-center gap-8 pb-5 pt-5 mt-[-2px]
+      className='flex flex-row-reverse justify-center md:justify-between
+      md:px-5 items-center gap-8 pb-5 pt-5 mt-[-2px]
       w-[250px] md:w-[450px] xl:w-[650px] bg-dark h-[60px] rounded-b-2xl'>
       {/* DELETE BUTTON */}
         <div
           aria-label='buttonDeleteAll'
           className='flex justify-center items-end font-bold
-            bg-darkRosa text-white'>
-          <button className="bg-dark2 shadow-inner bg-opacity-30 px-4 py-2 rounded-full" onClick={deleteAll}>Delete all</button>
+          bg-darkRosa text-white'>
+          <button
+            type='button'
+            className="bg-dark2 shadow-inner bg-opacity-30 px-4
+            py-2 rounded-full"
+            onClick={deleteAll}>Delete all</button>
         </div>
       {/* TIME */}
         <div
           aria-label='time'
           className='text-background text-opacity-80
-            font-bold text-lg flex flex-row justify-center items-center gap-3'>
+          font-bold text-lg flex flex-row justify-center items-center gap-3'>
           <BsFillClockFill/>
           <h2>{time}</h2>
         </div>
@@ -150,6 +158,7 @@ function Checklist() {
     <div className='flex flex-row justify-center gap-10 md:mr-0'>
         <div className='flex flex-row justify-center items-center gap-3'>
           <button
+            type='button'
             onClick={toGithub}
             className='w-[45px] h-[45px] bg-backgroundDark bg-opacity-30 shadow-inner
             rounded-full text-gray text-opacity-20 font-black
@@ -157,12 +166,14 @@ function Checklist() {
             <GoMarkGithub className='text-3xl'/>
           </button>
           <button
+            type='button'
             onClick={toMe}
             className='w-[45px] h-[45px] bg-backgroundDark bg-opacity-30 shadow-inner
             rounded-full text-gray text-opacity-20 font-black flex
             justify-center items-center'><AiFillSmile className='text-3xl'/>
           </button>
           <button
+            type='button'
             onClick={()=>navigate('/')}
             className='font-black font-body text-center text-[17px] leading-[15px]
             text-gray text-opacity-30 bg-backgroundDark bg-opacity-30

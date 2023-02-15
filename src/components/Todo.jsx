@@ -6,8 +6,7 @@ import { AiTwotoneEdit,AiFillDelete,AiFillCheckCircle } from "react-icons/ai";
 function Todo({item, onUpdate, onDelete, changeStatus}) {
   const [isEdit, setIsEdit] = useState(false);
 
-
-// EDIT ITEM
+  // EDIT ITEM
   function FormEdit(){
     const [newValue, setNewValue] = useState(item.name);
 
@@ -23,15 +22,16 @@ function Todo({item, onUpdate, onDelete, changeStatus}) {
     return(
       <form
         aria-label="updateEdit"
-        className=""
+        className="w-full"
         onSubmit={handleSubmit}>
         <input
           type='text'
-          className="todoInput"
+          className="todoInput w-[95%] pl-3 text-dark bg-backgroundDark rounded-md p-1 mb-1"
           value={newValue}
           onChange={(e) => setNewValue(e.target.value)}/>
         <button
-          className="btn btn-primary me-md-2"
+          type='button'
+          className="text-white text-l ml-2"
           onClick={handleClickUpdateTodo}><AiFillCheckCircle/>
         </button>
       </form>
@@ -43,20 +43,19 @@ function Todo({item, onUpdate, onDelete, changeStatus}) {
     return (
       <ul
         aria-label="todo"
-        className="shadow-inner bg-light mb-1 rounded-lg">
+        className="shadow-inner text-white pl-3 cursor-pointer bg-light mb-1 rounded-lg">
           <div className={item.completed ? "true" : "false"}>
             <li
               className="p-1 flex items-center justify-between"
-              onClick={() => changeStatus(item)} >{item.name} 
-            <div className="">
+              onClick={() => changeStatus(item)}>{item.name} 
+            <div>
               <button
-                className="btn btn-primary me-md-2"
                 type="button"
-                onClick={() => setIsEdit(true)}><AiTwotoneEdit/>
+                onClick={() => setIsEdit(true)}><AiTwotoneEdit className="text-backgroundDark hover:text-white"/>
               </button>
               <button
-                className="btn btn-secondary"
-                onClick={() => onDelete(item.id)}><AiFillDelete/>
+                type='button'
+                onClick={() => onDelete(item.id)}><AiFillDelete className="mx-2 text-white hover:text-rot rounded-full"/>
               </button>
             </div>
             </li>
