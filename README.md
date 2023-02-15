@@ -3,8 +3,8 @@
 Ein Klienes Projekt mit React-Vite und Tilwind.Es ist ein TodoList mit einem Taschenrechner und mit einem responsive Design.
 
 ## Mobile version
-![image](https://user-images.githubusercontent.com/92849517/219058574-68d84648-7c61-44a9-998f-dbda3e773a15.png)
-![image](https://user-images.githubusercontent.com/92849517/219058162-9a27ff3a-8c82-4513-8d48-bc6ffeb08e1d.png)
+![image](https://user-images.githubusercontent.com/92849517/219060991-b48f6926-db82-4d52-ac3b-39448b534096.png)
+![image](https://user-images.githubusercontent.com/92849517/219061107-99b8fbb9-a6ff-43ee-a851-a3d3fd03019e.png)
 
 ## Desktop version
 ![Bildschirmfoto von 2023-02-15 15-40-14](https://user-images.githubusercontent.com/92849517/219059245-c3ae9674-79e6-421a-800e-cac55b4998b0.png)
